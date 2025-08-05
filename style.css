@@ -22,14 +22,18 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
-    position: fixed; 
+    padding: 20px 40px;
+    position: sticky; 
     top: 0;         
     left: 0;
     width: 100%;    
     background-color: white;
-    padding: 10px;
     z-index: 1000; 
+}
+
+.hostinger-icon{
+    width: 147px; 
+    height: 80px;
 }
 
 .hostinger-header-content-left{
@@ -70,6 +74,24 @@ header{
     height: 20px;
 }
 
+.hostinger-header-content-right__menu-icon{
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (max-width:1140px){
+    .hostinger-header-content-right{
+        display: none;
+    }
+    .hostinger-header-content__nav{
+        display: none;
+    }
+    .hostinger-header-content-right__menu-icon{
+        display: flex;
+    }
+}
+
 /*----------------main---------------*/
 
 /*---------------section A----------*/
@@ -77,26 +99,32 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 80px;
-    padding: 20px;
+    padding: 0px 40px;
+    margin: 0px 63px;
 }
 
 .hostinger-main-container__side{
     display: flex;
     flex-direction: column;
     gap: 17px;
-    margin: 80px
 }
 
 .hostinger-main-container__title{
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
+    line-height: 40px;
     color: #1d1e20;
 }
 
 .hostinger-main-container__sentence{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.hostinger-header-content__main-image{
+    width: 880px; 
+    height: 577px;
 }
 
 .hostinger-main-container__main_list{
@@ -117,14 +145,6 @@ header{
     gap: 5px;
 }
 
-.hostinger-main-container___buttons{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    border: none;
-    font-size: 15px;
-}
-
 .hostinger-main-container___left-button{
     background-color: #673de6;
     color: #ffffff;
@@ -133,6 +153,8 @@ header{
     padding: 12px 48px;
     font-size: 16px;
     font-weight: 600;
+    width: 186px;
+    height: 48px;
 }
 
 
@@ -141,27 +163,51 @@ header{
     font-size: 16px;
 }
 
+@media screen and (max-width: 1025px){
+    .hostinger-main-container{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:768px){
+    .hostinger-main-container__title{
+        font-size: 24px;
+    }
+    .hostinger-header-content__main-image{
+        width: 508px;
+        height: 333px;
+    }
+    .hostinger-main-container___left-button{
+        width: 508px;
+        height: 48px;
+    }
+
+}
 /*----------section b-------*/
 .section-background-colors{
     background-color: #1f1346;
     color: #ffffff;
+    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 .titulo{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 36px;
+    line-height: 24px;
 }
 
 .subtitulo{
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .encabezado{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    align-items: center;
+    padding: 0px 40px;
+    margin: 0px 196px 48px;
 }
 
 
@@ -175,7 +221,7 @@ header{
 .cajasContenido{
     background-color:#2f1c6a;
     width: 360px;
-    height: 280px;
+    height: 256px;
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
@@ -183,34 +229,50 @@ header{
 
 .subtituloBox{
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 
 .textoBox{
-    font-size: 20px;
+    font-size: 16px;
 }
 
+@media screen and (max-width: 1025px){
+    .grupoCajas{
+        flex-direction: column;
+    }
+    .cajasContenido{
+        width: 688px;
+        height: 208px;
+    }
+}
+/*-----------------------------*/
 
 /*----------footer-----------*/
 
-footer{
+.hostinger-footer-section{
     background-color: #f4f5ff;
-    padding: 20px 80px;
-
+    padding: 0px 40px;
+    margin: 0 196px;
+    min-width: 100vh;
 }
 
-.hostinger-footer__section-credit-cards{
+.hostinger-footer-section__credit-cards{
     display: flex;
     gap: 8px;
     align-items: center;
+}
+
+.hostinger-footer-section__and-more{
+    font-size: 14px;
+    color: #673de6;
 }
 
 .credit-card-sizing{
     width: 60px; 
     height: 40px;
     border-radius: 5px;
-    border: 2px solid #d5dfff;
+    border: 1px solid #d5dfff;
 }
 
 .hostinger-footer-section__service-terms{
@@ -220,4 +282,32 @@ footer{
     gap: 15px;
     display: flex;
     align-items: center;
+}
+.hostinger-footer-section__line{
+    border: none;       
+    height: 1px;           
+    background-color: #d5dfff; 
+    margin-top: 20px;  
+}
+
+.hostinger-footer-section__copyright{
+    display: flex;
+    flex-direction: row;
+    gap: 128px;
+    padding: 24px 0;
+    font-size: 14px;
+    color: #241e27;
+}
+
+@media screen and (max-width:1025px) {
+    .footer-flex-direction-row{
+        flex-direction: column-reverse;
+    }
+    .hostinger-footer-section__service-terms{
+        margin-bottom: 24px;
+    }
+    .hostinger-footer-section__copyright{
+        flex-direction: column;
+        gap: 10px;
+    }
 }

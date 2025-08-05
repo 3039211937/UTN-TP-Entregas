@@ -9,8 +9,8 @@
 <body>
     <header>
             <div class="hostinger-header-content-left">
-            <img src="icons/hostinger-img.jpg" alt="hostinger-icon" width="150px" height="70px">
-            <nav class="hostinger-header-content__nav">
+                <img src="icons/hostinger-img.jpg" alt="hostinger-icon" class="hostinger-icon">
+                <nav class="hostinger-header-content__nav">
                 <a>Precios</a>
                 <a>Servicios</a>
                 <a>Explorar</a>
@@ -18,13 +18,14 @@
                 <a>Horizons</a>
                 </nav>
             </div>
-        <div class="hostinger-header-content-right">
-            <div>
+            <div class="hostinger-header-content-right">
+            <div class="hostinger-header-content-right__languages">
                 <img src="icons/argentina-img.jpg" class="hostinger-header-content-right__flag">
-                <a class="hostinger-header-content-right__languages">Español</a>
+                <a>Español</a>
             </div>
-            <a class="hostinger-header-content-right__myaccount">Mi cuenta</a>
-        </div>
+                <a class="hostinger-header-content-right__myaccount">Mi cuenta</a>
+                <img src="icons/menu.png" alt="menu-icon" class="hostinger-header-content-right__menu-icon">
+            </div>
     </header>
 <!--------------------------main-------------------------------------->
 <!--------------------------Section A--------------------------------->
@@ -39,12 +40,10 @@
                     <span><img src="icons/checkmark-icon.png" width="20px" height="20px">Migración gratis</span>
                     <span><img src="icons/checkmark-icon.png" width="20px" height="20px">Atención al cliente 24/7</span>
                 </div>
-                <div class="hostinger-main-container___buttons">
                     <a class="hostinger-main-container___left-button">Empezar ya</a>
-                </div>
                 <span class="hostinger-main-container__warranty">Garantia de 30 días: probalo sin cargo</span>
             </div>
-                <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/5a9a19e7-fef4-4cf6-65b1-01001ef95f00/public" style="width: 900px; height: auto;">
+                <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/5a9a19e7-fef4-4cf6-65b1-01001ef95f00/public" class="hostinger-header-content__main-image">
         </section>
 <!--------------------------Section B--------------------------------->
     <section class="section-background-colors">
@@ -84,12 +83,12 @@
     </div>
     </section>
 <!--------------------------footer------------------------------------>
-    <footer>
+    <footer class="hostinger-footer-section">
         <div class="footer-flex-direction-row">
-            <img src="icons/hostinger-img.jpg" alt="hostinger_icon" width="150px" height="70px">
+            <img src="icons/hostinger-img.jpg" alt="hostinger_icon" class="hostinger-icon">
         </div>
     <div class="footer-flex-direction-row">
-        <div class="hostinger-footer__section-credit-cards">
+        <div class="hostinger-footer-section__credit-cards">
             <img src="icons/footer-visa-img.avif" alt="visa-icon" class="credit-card-sizing">
             <img src="icons/footer-master-card-img.avif" alt="master-card-icon" class="credit-card-sizing">
             <img src="icons/footer-amex-img.png" alt="amex-icon" class="credit-card-sizing">
@@ -97,13 +96,18 @@
             <img src="icons/footer-naranja-img.avif" alt="naranja-icon" class="credit-card-sizing">
             <img src="icons/footer-cordial-img.avif" alt="cordial-icon" class="credit-card-sizing">
             <img src="icons/footer-cordobesa-img.avif" alt="cordobesa-icon" class="credit-card-sizing">
-            <span>y más</span>
+            <span class="hostinger-footer-section__and-more">y más</span>
         </div>
         <div class="hostinger-footer-section__service-terms">
             <a>Politica de privacidad</a>
             <a>Política de reembolso</a>
             <a>Término de servicio</a>
         </div>
+    </div>
+    <hr class="hostinger-footer-section__line">
+    <div class="hostinger-footer-section__copyright">
+        <span>© 2004-2025 Hostinger – Subí tu proyecto a internet, hacelo crecer y superá tus metas gracias al poder de la inteligencia artificial</span>
+        <span>Los precios se muestran sin IVA</span>
     </div>
     </footer>
 </body>
