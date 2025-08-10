@@ -1,62 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "DM Sans";
 }
 
-.footer-flex-direction-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 /*-----------header--------------*/
-
-header{
-    height: 70px;
+header {
+    height: 88px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 40px;
-    position: sticky; 
-    top: 0;         
-    left: 0;
-    width: 100%;    
+    position: fixed;
+    width: 100%;
     background-color: white;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
-.hostinger-icon{
-    width: 147px; 
+.hostinger-icon {
+    width: 147px;
     height: 80px;
 }
 
-.hostinger-header-content-left{
+.hostinger-header__left-content {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 32px;
     align-items: center;
 }
 
-.hostinger-header-content-right{
+.hostinger-header__right-content {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 32px;
     align-items: center;
 }
 
-.hostinger-header-content__nav{
+.hostinger-header__nav {
     display: flex;
-    gap: 24px;
+    gap: 32px;
     font-size: 16px;
 }
 
-.hostinger-header-content-right__myaccount{
+.hostinger-header__right-content-myaccount {
     background-color: #ffffff;
     border-radius: 7px;
     border: 1px solid #1d1e20;
@@ -65,87 +55,106 @@ header{
     font-weight: 600;
 }
 
-.hostinger-header-content-right__languages{
+.hostinger-header__right-content-languages {
     font-weight: 600;
 }
 
-.hostinger-header-content-right__flag{
+.hostinger-header__right-content__flag {
     width: 32px;
     height: 20px;
+    border: 1px solid #d5dfff;
+    line-height: 24px;
 }
 
-.hostinger-header-content-right__menu-icon{
+.hostinger-header__right-content-menu-icon {
     display: none;
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
 }
 
-@media screen and (max-width:1140px){
-    .hostinger-header-content-right{
+@media screen and (min-width:1920px) {
+    header {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1140px) {
+    .hostinger-header__right-content {
         display: none;
     }
-    .hostinger-header-content__nav{
+
+    .hostinger-header__nav {
         display: none;
     }
-    .hostinger-header-content-right__menu-icon{
+
+    .hostinger-header__right-content-menu-icon {
         display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
 /*----------------main---------------*/
 
 /*---------------section A----------*/
-.hostinger-main-container{
+.hostinger-main-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 40px;
-    margin: 0px 63px;
+    padding: 96px 40px;
+    margin: 0 64px;
 }
 
-.hostinger-main-container__side{
+
+.hostinger-main-container__side {
     display: flex;
     flex-direction: column;
     gap: 17px;
+    margin-top: 120px;
 }
 
-.hostinger-main-container__title{
+.hostinger-main-container__title {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 36px;
     line-height: 40px;
     color: #1d1e20;
 }
 
-.hostinger-main-container__sentence{
+.hostinger-main-container__sentence {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 32px;
 }
 
-.hostinger-header-content__main-image{
-    width: 880px; 
+.hostinger-header-content__main-image {
+    width: 880px;
     height: 577px;
+    position: relative;
 }
 
-.hostinger-main-container__main_list{
+.hostinger-main-container__main_list {
     display: flex;
     flex-direction: column;
-    font-size: 16px;
-    margin-left: 25px;
     gap: 5px;
 }
 
-.hostinger-main-container__sentence--discount{
+.hostinger-main-container__main_list-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.hostinger-main-container__sentence--discount {
     color: #673de6;
 }
 
-.hostinger-main-container_price-container{
+.hostinger-main-container__price-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.hostinger-main-container___left-button{
+.hostinger-main-container___left-button {
     background-color: #673de6;
     color: #ffffff;
     border-radius: 10px;
@@ -154,160 +163,340 @@ header{
     font-size: 16px;
     font-weight: 600;
     width: 186px;
-    height: 48px;
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    text-align: center;
+    position: relative;
+    line-height: 24px;
 }
 
 
-.hostinger-main-container__warranty{
+.hostinger-main-container__warranty {
     font-weight: 300;
     font-size: 16px;
 }
 
-@media screen and (max-width: 1025px){
-    .hostinger-main-container{
+@media screen and (min-width:1920px) {
+    body {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
 }
-@media screen and (max-width:768px){
-    .hostinger-main-container__title{
+
+
+@media screen and (max-width:1367px) {
+    .hostinger-header-content__main-image {
+        width: 616px;
+        height: 404px;
+
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .hostinger-main-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0 50px;
+    }
+
+    .hostinger-header-content__main-image {
+        width: auto;
+        height: auto;
+    }
+
+    .hostinger-main-container__title {
+        font-size: 28px;
+    }
+
+    .hostinger-main-container__sentence {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .hostinger-main-container {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 768px;
+    }
+
+    .hostinger-main-container__title {
         font-size: 24px;
     }
-    .hostinger-header-content__main-image{
-        width: 508px;
-        height: 333px;
-    }
-    .hostinger-main-container___left-button{
+
+    .hostinger-main-container___left-button {
         width: 508px;
         height: 48px;
     }
-
 }
+
+@media screen and (max-width:540px) {
+    .hostinger-main-container___left-button {
+        width: auto;
+    }
+
+    .hostinger-main-container__side {
+        height: auto;
+        width: auto;
+    }
+}
+
 /*----------section b-------*/
-.section-background-colors{
+.hostinger-main-container-section-violet {
     background-color: #1f1346;
     color: #ffffff;
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding: 80px 0px;
+    margin: auto;
+    width: 100%;
 }
 
-.titulo{
+.hostinger-main-container-section-violet__header-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 24px;
 }
 
-.subtitulo{
+.hostinger-main-container-section-violet__header-subtitle {
     font-size: 16px;
     line-height: 24px;
 }
 
-.encabezado{
+.hostinger-main-container-section-violet__header {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
     align-items: center;
     padding: 0px 40px;
-    margin: 0px 196px 48px;
+    margin: 0px auto 48px;
 }
 
 
-.grupoCajas{
+.hostinger-main-container-section-violet__boxes-group {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.cajasContenido{
-    background-color:#2f1c6a;
-    width: 360px;
-    height: 256px;
+.hostinger-main-container-section-violet__boxes-group__containers {
+    background-color: #2f1c6a;
+    width: 100%;
+    max-width: 360px;
+    height: 235px;
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
+    box-sizing: border-box;
+    text-align: left;
 }
 
-.subtituloBox{
+
+.hostinger-main-container-section-violet__boxes-group__containers-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.hostinger-main-container-section-violet__boxes-group__containers-title {
     margin-bottom: 30px;
     font-size: 18px;
     font-weight: 700;
 }
 
-.textoBox{
+.hostinger-main-container-section-violet__boxes-group__containers-text {
     font-size: 16px;
+    line-height: 24px;
 }
 
-@media screen and (max-width: 1025px){
-    .grupoCajas{
-        flex-direction: column;
-    }
-    .cajasContenido{
-        width: 688px;
-        height: 208px;
+@media screen and (max-width:1208px) {
+    .hostinger-main-container-section-violet__boxes-group__containers {
+        width: auto;
     }
 }
+
+@media screen and (max-width: 1025px) {
+    .hostinger-main-container-section-violet {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .hostinger-main-container-section-violet__boxes-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hostinger-main-container-section-violet__boxes-group__containers {
+        max-width: 688px;
+        width: 100%;
+
+    }
+
+    .hostinger-main-container-section-violet__header-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hostinger-main-container-section-violet {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .hostinger-main-container-section-violet__boxes-group__containers {
+        max-width: 508px;
+        width: auto;
+        height: auto;
+    }
+
+    .hostinger-main-container-section-violet__header {
+        padding: 0px 16px;
+        margin: 0px auto 32px;
+    }
+}
+
 /*-----------------------------*/
 
 /*----------footer-----------*/
 
-.hostinger-footer-section{
+.hostinger-footer-section {
     background-color: #f4f5ff;
-    padding: 0px 40px;
-    margin: 0 196px;
-    min-width: 100vh;
+    padding: 0 196px;
+    margin: auto;
+    max-width: 100%;
 }
 
-.hostinger-footer-section__credit-cards{
+.hostinger-footer-section-header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.hostinger-footer-section__credit-cards- {
+    display: flex;
+    flex-direction: row;
     gap: 8px;
+    align-items: center;
+    line-height: 24px;
+}
+
+.hostinger-footer-section__and-more {
+    display: flex;
+    font-size: 14px;
+    color: #673de6;
+    font-weight: 700;
     align-items: center;
 }
 
-.hostinger-footer-section__and-more{
-    font-size: 14px;
-    color: #673de6;
-}
-
-.credit-card-sizing{
-    width: 60px; 
+.credit-card-sizing {
+    width: 60px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid #d5dfff;
 }
 
-.hostinger-footer-section__service-terms{
+.hostinger-footer-section__service-terms {
+    display: flex;
+    flex-direction: row;
     color: #1d1e27;
     font-size: 14px;
     text-decoration: none;
     gap: 15px;
-    display: flex;
-    align-items: center;
-}
-.hostinger-footer-section__line{
-    border: none;       
-    height: 1px;           
-    background-color: #d5dfff; 
-    margin-top: 20px;  
+    line-height: 24px;
+    height: auto;
 }
 
-.hostinger-footer-section__copyright{
+.hostinger-footer-section__line {
+    border: none;
+    height: 1px;
+    background-color: #d5dfff;
+    margin-top: 20px;
+}
+
+.hostinger-footer-section__copyright {
     display: flex;
     flex-direction: row;
     gap: 128px;
     padding: 24px 0;
     font-size: 14px;
     color: #241e27;
+    line-height: 24px;
 }
 
-@media screen and (max-width:1025px) {
-    .footer-flex-direction-row{
-        flex-direction: column-reverse;
+.hostinger-footer-section__social-media {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 0 16px;
+
+}
+
+.hostinger-footer-section__social-media-icons {
+    width: 32px;
+    height: 32px;
+}
+
+.hostinger-footer-section__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:1024px) {
+    .hostinger-footer-section {
+        padding: 0 40px;
+        width: 100%;
+
     }
-    .hostinger-footer-section__service-terms{
+
+    .hostinger-footer-section__service-terms {
         margin-bottom: 24px;
+        width: auto;
+        max-width: 100%;
     }
-    .hostinger-footer-section__copyright{
+
+    .hostinger-footer-section__copyright {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .hostinger-footer-section__social-media {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    .hostinger-footer-section__bottom {
+        flex-direction: column-reverse;
+    }
+
+
+}
+
+@media screen and (max-width:767px) {
+    .hostinger-footer-section__service-terms {
+        gap: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hostinger-footer-section__social-media {
+        gap: 16px;
+        justify-content: space-between;
+    }
+
+    .hostinger-footer-section-header {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .hostinger-footer-section {
+        padding: 0 16px;
     }
 }
